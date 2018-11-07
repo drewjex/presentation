@@ -22,8 +22,12 @@
   width:100%;
 }
 
+.Page.has-header {
+  justify-content: start;
+}
+
 .Page .title {
-  font-size:48px;
+  font-size:92px;
 }
 
 .Page .title.big {
@@ -32,17 +36,28 @@
 
 .Page .content {
   font-size:24px;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.Page .content li {
+  text-align:left;
+  font-size:48px;
 }
 
 .Page .content.big {
   font-size:32px;
-  margin-top:20px;
+  /*margin-top:20px;*/
 }
 
 .Page .header {
-  position: fixed;
-  top:100px;
+  /* position: fixed;
+  top:100px; */
+  margin-top:100px;
   font-size:64px;
+  width:80%;
+  text-align:left;
+  border-bottom: 2px solid white;
 }
 
 .Page .footer {
@@ -51,13 +66,31 @@
   font-size:16px;
 }
 
-.Page iframe {
+.Page img.logo {
+  top:unset;
+  left:unset;
+  height: auto;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width:50px;
+}
+
+.Page iframe,
+.Page img {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 80%;
   transform: translateX(-50%) translateY(-50%);
   height: 80%;
+  border: 5px solid white;
+  object-fit: cover;
+}
+
+.Page img.contain {
+  object-fit: contain;
+  border: 0;
 }
 
 .Page.hiddenright {

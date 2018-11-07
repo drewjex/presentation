@@ -8,25 +8,40 @@ export default class Page extends Component {
     }
 
     render() {
-        const { isHiddenLeft, isHiddenRight, title, content, index, footer, header, iframe } = this.props; 
+        const { isHiddenLeft, isHiddenRight, title, content, index, footer, header, iframe, image, imageStyle } = this.props; 
         return (
-            <div className={`Page ${isHiddenLeft && 'hiddenleft'} ${isHiddenRight && 'hiddenright'}`} 
+            <div className={`Page ${isHiddenLeft && 'hiddenleft'} ${isHiddenRight && 'hiddenright'} ${header && 'has-header'}`} 
                  ref={node => (this[`Page${index}`] = node)}>
-                <div className="header">
-                    {header}
-                </div>
+                 {header && 
+                    <div className="header">
+                        {header}
+                    </div>
+                 }
                 <div className={`title ${index === 0 && 'big'}`}>
                     {title}
                 </div>
                 <div className={`content ${index === 0 && 'big'}`}>
-                    {content}
+                    {typeof content === "string" &&
+                        content
+                    }
+                    {content instanceof Array &&
+                        <ul>
+                            {content.map((c, i) => {
+                                return <li key={i}>{c}</li>
+                            })}
+                        </ul>
+                    }
                     {iframe && 
                         <iframe title={`iframe${index}`} src={iframe} width="100%" height="100%" />
+                    }
+                    {image && 
+                        <img alt='' className={`${imageStyle === 'contain' && 'contain'}`} src={image} width="100%" height="100%" />
                     }
                 </div>
                 <div className="footer">
                     {footer ? footer : index}
                 </div>
+                <img alt='' className="logo" src="https://www.accessdevelopment.com/hs-fs/hubfs/AccessDevelopment_June2017/logo.png?t=1529951130710&width=138&name=logo.png" />
             </div>
         )
     }
