@@ -18,12 +18,46 @@
   transition: all 1s ease-in-out;
 }
 
+.Page * {
+  width:100%;
+}
+
 .Page .title {
   font-size:48px;
 }
 
+.Page .title.big {
+  font-size:92px;
+}
+
 .Page .content {
   font-size:24px;
+}
+
+.Page .content.big {
+  font-size:32px;
+  margin-top:20px;
+}
+
+.Page .header {
+  position: fixed;
+  top:100px;
+  font-size:64px;
+}
+
+.Page .footer {
+  position: fixed;
+  bottom:20px;
+  font-size:16px;
+}
+
+.Page iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 80%;
 }
 
 .Page.hiddenright {

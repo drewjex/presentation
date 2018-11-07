@@ -4,16 +4,24 @@ import Page from "./Page";
 
 const pages = [
   {
-    title:'TESTING PAGE ONE',
-    content:`Here is some basic content.`
+    title:'CSS Fundamentals!',
+    content:"Drew Jex",
+    footer:`Access Development Front End Dev`
   },
   {
-    title:'TESTING PAGE TWO',
-    content:`Here is some basic content.`
+    header:'TESTING PAGE TWO',
+    content:`Here is some basic content. asldjfa js kfjalsdf. ajslkdj flasj.dfj.asjdf.aj s.dfj 
+    
+    aalsjdlfkj asldjfasdjf. a
+    
+    alksjdlk fjaslkd jf. .as jdf
+    
+    ajskld fjlkas jdlfk`
   },
   {
     title:'TESTING PAGE THREE',
-    content:`Here is some basic content.`
+    content:`Here is some basic content.`,
+    iframe: 'https://codepen.io/drewjex/pen/EOYBap'
   }
 ]
 
@@ -24,7 +32,7 @@ class App extends Component {
 
   componentDidMount() {
     document.body.addEventListener('click', event => {
-      this.moveForward();
+      //this.moveForward();
     })
 
     document.onkeydown = e => {
@@ -54,12 +62,11 @@ class App extends Component {
       <div className="App__container">
         {pages.map((page, index) => (
           <Page key={index}
-                title={page.title}
-                content={page.content}
                 isHiddenRight={this.state.current < index}
                 isHiddenLeft={this.state.current > index}
                 index={index}
-                color={this.generateColor()} />
+                color={this.generateColor()} 
+                {...page} />
         ))}
       </div>
     );
