@@ -9,37 +9,119 @@ const pages = [
     footer: "Access Development Front End Dev Team"
   },
   {
-    image: 'https://ic.pics.livejournal.com/ivles/1125176/3534/3534_original.gif',
+    image: 'https://davidwalsh.name/demo/css-comic.jpg', //'https://ic.pics.livejournal.com/ivles/1125176/3534/3534_original.gif',
     imageStyle: 'contain'
   },
   {
-    title:'CSS - it\'s kind of hard!'
+    title:'CSS - it\'s kind of weird!'
   },
   {
-    iframe: 'https://saijogeorge.com/css-puns/'
-  },
-  {
-    header:'TESTING PAGE TWO',
+    header:'Things I wish I knew when I started',
     content: [
-      'Here is a bulletpoint',
-      'And another',
-      'And yet another one'
+      'Box Model',
+      'Specificity',
+      'BEM',
+      'Positioning',
+      'Flexbox',
+      'SCSS',
+    ]
+  },
+  {
+    title:'Box Model'
+  },
+  {
+    iframe:'https://css-tricks.com/the-css-box-model/'
+  },
+  {
+    title:'box-sizing: border-box'
+  },
+  {
+    iframe: 'https://codepen.io/drewjex/pen/LXGQZY'
+  },
+  {
+    title:'Specificity'
+  },
+  {
+    header: 'Specificity',
+    iframe: 'https://css-tricks.com/specifics-on-css-specificity/#article-header-id-0'
+  },
+  {
+    iframe: 'https://codepen.io/drewjex/pen/PxZEMG'
+  },
+  {
+    title:'BEM'
+  },
+  {
+    iframe: 'http://getbem.com/naming/'
+  },
+  {
+    title: 'Positioning'
+  },
+  {
+    header: 'Four Types',
+    content: [
+      'Static - default',
+      'Relative',
+      'Absolute',
+      'Fixed'
+    ]
+  },
+  {
+    iframe: 'https://codepen.io/drewjex/pen/PxZEMG'
+  },
+  {
+    title:'Flexbox'
+  },
+  {
+    iframe: 'https://codepen.io/drewjex/pen/JePxaB'
+  },
+  {
+    title:'SCSS'
+  },
+  {
+    header:'SCSS Advantages',
+    content: [
+      'Variables',
+      'Nesting',
+      'Mixins'
+    ]
+  },
+  {
+    title:'Nesting is nice, but it can make your code complicated'
+  },
+  {
+    iframe: 'https://www.sitepoint.com/beware-selector-nesting-sass/'
+  },
+  {
+    header:'Other Stuff',
+    content: [
+      "CSS Vars (how ARC Theming works)",
+      "Animations/Transitions - often simple with awesome results"
     ]
   },
   {
     iframe: 'https://codepen.io/drewjex/pen/EOYBap'
   },
   {
-    image: 'https://www.tennisworldusa.org/imgb/67209/roger-federer-explains-why-he-may-never-write-a-book.jpg'
+    title:'When you understand the fundamentals - everything becomes easier'
+  },
+  {
+    image: 'https://ic.pics.livejournal.com/ivles/1125176/3534/3534_original.gif',
+    imageStyle: 'contain'
   }
 ]
 
 class App extends Component {
   state = {
+    isLoading: true,
     current: 0
   }
 
   componentDidMount() {
+    window.addEventListener('load', event => {
+      this.setState({isLoading: false});
+    });
+
     document.body.addEventListener('click', event => {
       //this.moveForward();
     })
@@ -52,11 +134,17 @@ class App extends Component {
       }
       else if (e.key === "ArrowRight") {
         this.moveForward();
+      } else if (parseInt(e.key) >= 0 && parseInt(e.key) <= 9) {
+        this.goTo(parseInt(e.key));
       }
     }
   }
 
   generateColor = () => '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+
+  goTo = index => {
+    this.setState({current: index});
+  }
 
   moveForward = () => {
     this.setState(previousState => {
@@ -78,7 +166,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App__container">
+      <div className={`App__container ${this.state.isLoading && 'loading'}`}>
         {pages.map((page, index) => (
           <Page key={index}
                 isHiddenRight={this.state.current < index}

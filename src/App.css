@@ -1,9 +1,22 @@
 .App__container {
   text-align: center;
+  opacity:1;
+  transition: all 1s ease-in-out;
+}
+
+.App__container.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .1;
+  animation: loading 1s ease-in-out infinite;
 }
 
 .Page {
   position:fixed;
+  padding:10px;
   top:0;
   left:0;
   right:0;
@@ -37,7 +50,7 @@
 .Page .content {
   font-size:24px;
   width: 80%;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .Page .content li {
@@ -79,6 +92,7 @@
 .Page iframe,
 .Page img {
   position: absolute;
+  background: white;
   top: 50%;
   left: 50%;
   width: 80%;
@@ -109,5 +123,15 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    opacity:.1;
+  } 50% {
+    opacity:.2;
+  } 100% {
+    opacity: .1;
   }
 }
