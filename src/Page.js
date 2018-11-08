@@ -34,8 +34,7 @@ export default class Page extends Component {
                     }
                     {iframe && 
                         <PureIframe iframe={iframe} 
-                                    index={index}
-                                    container={this[`Page${index}`]} />
+                                    index={index} />
                     }
                     {image && 
                         <img alt='' className={`${imageStyle === 'contain' && 'contain'}`} src={image} width="100%" height="100%" />
