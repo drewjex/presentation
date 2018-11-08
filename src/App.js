@@ -43,7 +43,6 @@ const pages = [
     title:'Specificity'
   },
   {
-    header: 'Specificity',
     iframe: 'https://css-tricks.com/specifics-on-css-specificity/#article-header-id-0'
   },
   {
@@ -124,8 +123,8 @@ class App extends Component {
       this.setState({isLoading: false});
     });
 
-    document.body.addEventListener('click', event => {
-      //this.moveForward();
+    document.body.addEventListener('touchstart', event => {
+      this.moveForward();
     })
 
     document.onkeydown = e => {
