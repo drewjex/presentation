@@ -31,15 +31,15 @@ const pages = [
     header: "Basic Principles",
     content: [
       "Reducers are pure",
-      "entire state recreated when change occurs",
+      "Entire state recreated when change occurs",
       "Predictable (no side effects)"
     ]
   },
   {
-    title: "Selectors/Reducers"
+    title: "Reducers/Selectors - Write/Read"
   },
   {
-    title: "Dan the man once said..."
+    title: "\"Dan the man\" once said..."
   },
   {
     image: "/dan.png",
@@ -60,11 +60,58 @@ const pages = [
     imageStyle: "contain"
   },
   {
+    image: 'importselectors.png',
+    imageStyle: "contain"
+  },
+  {
     image: '/selectorsexample.png',
     imageStyle: "contain"
   },
   {
     title: "Decoupling components from redux = WIN"
+  },
+  {
+    title: "Global Selectors? Thoughts?"
+  },
+  {
+    title: "Memoization"
+  },
+  {
+    title: "Splitting up Reducers"
+  },
+  {
+    header: "Things to keep in mind...",
+    content: [
+      "Reducers not necesarily coupled with UI",
+      "Reducer depends on data from another reducer? Send data through action, set up hierarchy, or combine"
+    ]
+  },
+  {
+    title: "Redux Sauce"
+  },
+  {
+    title: "Much less boilerplate = :D"
+  },
+  {
+    title: "reselect - for expensive selectors"
+  },
+  {
+    title: "Thunks - when side effects are necessary"
+  },
+  {
+    title: "When should I connect()?"
+  },
+  {
+    title: "\"When it's convenient!\" - Dan Abramov"
+  },
+  {
+    title: "Containers vs Presenters"
+  },
+  {
+    title: "You don't need everything in redux"
+  },
+  {
+    title: "Questions? Comments?"
   }
 ]
 
