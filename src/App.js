@@ -5,9 +5,21 @@ import Page from "./Page";
 
 const pages = [
   {
-    title:'Blank Template',
+    title:'Redux - What I\'ve learned',
     content:"Drew Jex",
     footer: "Access Development Front End Dev Team"
+  },
+  {
+    header: "Overview",
+    content: [
+      "Basic Principles",
+      "Selectors/Reducers",
+      "BindSelectors",
+      "Nemoization",
+      "Splitting up Reducers",
+      "ReduxSauce",
+      "Thunks/Sagas"
+    ]
   }
 ]
 
