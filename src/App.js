@@ -15,11 +15,56 @@ const pages = [
       "Basic Principles",
       "Selectors/Reducers",
       "BindSelectors",
-      "Nemoization",
+      "Memoization",
       "Splitting up Reducers",
       "ReduxSauce",
-      "Thunks/Sagas"
+      "Thunks/Sagas",
+      "When to Connect",
+      "Containers/Presenters",
+      "Global store doesn't need everything"
     ]
+  },
+  {
+    title: "Basic Principles"
+  },
+  {
+    header: "Basic Principles",
+    content: [
+      "Reducers are pure",
+      "entire state recreated when change occurs",
+      "Predictable (no side effects)"
+    ]
+  },
+  {
+    title: "Selectors/Reducers"
+  },
+  {
+    title: "Dan the man once said..."
+  },
+  {
+    image: "/dan.png",
+    imageStyle: "contain"
+  },
+  {
+    title: "No Refactoring you say??"
+  },
+  {
+    title: "Using Selectors with BindSelectors()"
+  },
+  {
+    image: '/bindselectors.png',
+    imageStyle: "contain"
+  },
+  {
+    image: '/bindexample.png',
+    imageStyle: "contain"
+  },
+  {
+    image: '/selectorsexample.png',
+    imageStyle: "contain"
+  },
+  {
+    title: "Decoupling components from redux = WIN"
   }
 ]
 
