@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import update from "immutability-helper";
 import './App.css';
 import Page from "./Page";
 
@@ -114,6 +115,7 @@ const pages = [
 class App extends Component {
   state = {
     isLoading: true,
+    isLoaded:[],
     current: 0
   }
 
@@ -128,7 +130,6 @@ class App extends Component {
 
     document.onkeydown = e => {
       e = e || window.event;
-      console.log(e);
       if (e.key === "ArrowLeft") {
         this.moveBackward();
       }
@@ -164,17 +165,32 @@ class App extends Component {
     });
   }
 
+  onLoadPage = index => {
+    this.setState(previousState => ({
+      ...previousState,
+      isLoaded: update(previousState.isLoaded, {
+        [index]: {
+          $set: true
+        }
+      }),
+    }))
+  }
+
   render() {
     return (
       <div className={`App__container ${this.state.isLoading && 'loading'}`}>
-        {pages.map((page, index) => (
-          <Page key={index}
-                isHiddenRight={this.state.current < index}
-                isHiddenLeft={this.state.current > index}
-                index={index}
-                color={this.generateColor()} 
-                {...page} />
-        ))}
+        {pages.map((page, index) => {
+          if (index - this.state.current < 4 || this.state.isLoaded[index]) {
+            return <Page key={index}
+                        isHiddenRight={this.state.current < index}
+                        isHiddenLeft={this.state.current > index}
+                        index={index}
+                        color={this.generateColor()} 
+                        onLoad={this.onLoadPage}
+                        {...page} />
+          }
+          return null;
+        })}
       </div>
     );
   }

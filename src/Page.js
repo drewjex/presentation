@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-
+import PureIframe from "./PureIframe";
 
 export default class Page extends Component {
     componentDidMount() {
         const { color, index } = this.props;
         this[`Page${index}`].style.background = color;
+        this.props.onLoad(index);
     }
 
     render() {
@@ -32,7 +33,9 @@ export default class Page extends Component {
                         </ul>
                     }
                     {iframe && 
-                        <iframe title={`iframe${index}`} src={iframe} width="100%" height="100%" />
+                        <PureIframe iframe={iframe} 
+                                    index={index}
+                                    container={this[`Page${index}`]} />
                     }
                     {image && 
                         <img alt='' className={`${imageStyle === 'contain' && 'contain'}`} src={image} width="100%" height="100%" />
