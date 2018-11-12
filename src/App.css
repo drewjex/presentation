@@ -47,11 +47,13 @@
 }
 
 .Page.selected.zoomed {
-  opacity: .5;
+  box-shadow: 0 0 60pt 20pt rgb(2, 146, 241);
+  z-index: 3;
 }
 
 .Page.zoomed:hover {
-  opacity: .5;
+  /*opacity: .5;*/
+  box-shadow: 0 0 60pt 20pt rgb(2, 146, 241);
   cursor: pointer;
 }
 
