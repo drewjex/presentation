@@ -3,6 +3,7 @@ import update from "immutability-helper";
 import './App.css';
 import Page from "./Page";
 
+const backgroundColor = "random";
 const pages = [
   {
     title:'CSS Fundamentals!',
@@ -252,7 +253,7 @@ class App extends Component {
                         index={index}
                         style={this.state.styles[index]}
                         isZoomed={this.state.isZoomedOut}
-                        color={this.generateColor()} 
+                        color={backgroundColor === "random" ? this.generateColor() : backgroundColor} 
                         onLoad={this.onLoadPage}
                         onClick={this.onClick}
                         {...page} />
