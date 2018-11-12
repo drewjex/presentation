@@ -16,7 +16,7 @@
 
 .Page {
   position:fixed;
-  will-change: transform, left, right;
+  /*will-change: transform, left, right;*/
   padding:10px;
   top:0;
   left:0;
