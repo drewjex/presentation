@@ -107,6 +107,10 @@
   width:50px;
 }
 
+.Page.zoomed iframe {
+  pointer-events: none;
+}
+
 .Page iframe,
 .Page img {
   position: absolute;
