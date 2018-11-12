@@ -109,7 +109,11 @@ const pages = [
   {
     image: 'https://ic.pics.livejournal.com/ivles/1125176/3534/3534_original.gif',
     imageStyle: 'contain'
-  }
+  },
+  {
+    title:'Clone it, use it, make PRs!',
+    content: 'github.com/drewjex/presentation'
+  },
 ]
 
 class App extends Component {
