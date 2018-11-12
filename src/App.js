@@ -52,7 +52,7 @@ const pages = [
     title:'BEM'
   },
   {
-    iframe: 'http://getbem.com/naming/'
+    iframe: 'https://css-tricks.com/bem-101/'
   },
   {
     title: 'Positioning'
