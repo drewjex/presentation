@@ -47,11 +47,11 @@
 }
 
 .Page.selected.zoomed {
-  opacity: .7;
+  opacity: .5;
 }
 
 .Page.zoomed:hover {
-  opacity: .7;
+  opacity: .5;
   cursor: pointer;
 }
 

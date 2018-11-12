@@ -132,18 +132,22 @@ class App extends Component {
 
     document.onkeydown = e => {
       e = e || window.event;
-      console.log(e);
+      //console.log(e);
       if (e.key === "ArrowLeft") {
         this.moveBackward();
       } else if (e.key === "ArrowRight") {
         this.moveForward();
       } else if (parseInt(e.key) >= 0 && parseInt(e.key) <= 9) {
         this.goTo(parseInt(e.key));
-      } else if (e.key === "ArrowUp") {
-        this.zoomOut();
-      } else if (e.key === "ArrowDown" || e.key === "Enter") {
+      } else if (e.key === "ArrowUp" && this.state.current > 4 && this.state.isZoomedOut) {
+        this.goTo(this.state.current - 5);
+      } else if (e.key === "ArrowDown" && this.state.current < pages.length - 5 && this.state.isZoomedOut) {
+        this.goTo(this.state.current + 5);
+      } else if (e.key === "Enter") {
         this.zoomIn();
-      } 
+      } else if (e.key === "Escape") {
+        this.zoomOut();
+      }
     }
   }
 
