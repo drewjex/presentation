@@ -15,7 +15,9 @@ class App extends Component {
   state = {
     isLoading: true,
     isLoaded:[],
-    current: 0
+    current: 0,
+    isZoomedOut: false,
+    styles: []
   }
 
   componentDidMount() {
@@ -31,13 +33,59 @@ class App extends Component {
       e = e || window.event;
       if (e.key === "ArrowLeft") {
         this.moveBackward();
-      }
-      else if (e.key === "ArrowRight") {
+      } else if (e.key === "ArrowRight") {
         this.moveForward();
       } else if (parseInt(e.key) >= 0 && parseInt(e.key) <= 9) {
         this.goTo(parseInt(e.key));
+      } else if (e.key === "ArrowUp") {
+        this.zoomOut();
+      } else if (e.key === "ArrowDown") {
+        this.zoomIn();
       }
     }
+  }
+
+  zoomOut = () => {
+    const translateY = -200;
+    const left = -40;
+    const right = 40;
+    let row = 0;
+
+    const styles = pages.map((page, index) => {
+      if (index % 5 === 0 && index !== 0) row++;
+      return {
+        index: index,
+        left: `${left + (20 * (index % 5))}%`,
+        right: `${right - (20 * (index % 5))}%`,
+        transform: `scale(.2) translateY(${translateY + (100 * row)}%)`
+      }
+    })
+
+    this.setState({
+      isZoomedOut: true,
+      styles: styles
+    });
+  }
+
+  zoomIn = (index) => {
+    const styles = [];
+    if (index) {
+      styles[index] = {
+        zIndex: 2
+      }
+    }
+    this.setState({
+      isZoomedOut: false,
+      styles: styles
+    });
+  }
+
+  onClick = index => {
+    this.setState({
+      current: index
+    })
+
+    this.zoomIn(index);
   }
 
   generateColor = () => '#'+(Math.random()*0xFFFFFF<<0).toString(16);
@@ -79,13 +127,16 @@ class App extends Component {
     return (
       <div className={`App__container ${this.state.isLoading && 'loading'}`}>
         {pages.map((page, index) => {
-          if (index - this.state.current < 4 || this.state.isLoaded[index]) {
+          if (index - this.state.current < 4 || this.state.isLoaded[index] || this.state.isZoomedOut) {
             return <Page key={index}
                         isHiddenRight={this.state.current < index}
                         isHiddenLeft={this.state.current > index}
                         index={index}
+                        style={this.state.styles[index]}
+                        isZoomed={this.state.isZoomedOut}
                         color={this.generateColor()} 
                         onLoad={this.onLoadPage}
+                        onClick={this.onClick}
                         {...page} />
           }
           return null;
