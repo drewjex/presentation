@@ -58,12 +58,13 @@ const pages = [
     title: 'Positioning'
   },
   {
-    header: 'Four Types',
+    header: 'Five Types',
     content: [
       'Static - default',
       'Relative',
       'Absolute',
-      'Fixed'
+      'Fixed',
+      'Sticky'
     ]
   },
   {
