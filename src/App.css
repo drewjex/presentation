@@ -16,6 +16,7 @@
 
 .Page {
   position:fixed;
+  /*will-change: transform, left, right;*/
   padding:10px;
   top:0;
   left:0;
@@ -28,7 +29,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all .25s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .Page * {
@@ -40,13 +41,19 @@
 }
 
 .Page.zoomed {
-  transform: scale(.2);
-  position:absolute;
-  /*transition: opacity .25s ease-in-out, left 2s ease-in-out, right 2s ease-in-out;*/
+  /*transform: scale(.2);
+  position:absolute;*/
+  /*transition: opacity .25s ease-in-out, left .25s ease-in-out, right 5s ease-in-out, transform 5s ease-in-out;*/
+}
+
+.Page.selected.zoomed {
+  box-shadow: 0 0 60pt 20pt rgb(2, 146, 241);
+  z-index: 3;
 }
 
 .Page.zoomed:hover {
-  opacity: .7;
+  /*opacity: .5;*/
+  box-shadow: 0 0 60pt 20pt rgb(2, 146, 241);
   cursor: pointer;
 }
 
@@ -98,6 +105,10 @@
   bottom: 10px;
   right: 10px;
   width:50px;
+}
+
+.Page.zoomed iframe {
+  pointer-events: none;
 }
 
 .Page iframe,

@@ -9,10 +9,10 @@ export default class Page extends Component {
     }
 
     render() {
-        const { isHiddenLeft, isHiddenRight, title, content, index, footer, header, iframe, image, imageStyle, isZoomed, style, onClick } = this.props; 
+        const { isSelected, isHiddenLeft, isHiddenRight, title, content, index, footer, header, iframe, image, imageStyle, isZoomed, style, onClick } = this.props; 
         return (
             <div style={style} 
-                 className={`Page ${isHiddenLeft && 'hiddenleft'} ${isHiddenRight && 'hiddenright'} ${header && 'has-header'} ${isZoomed && 'zoomed'}`}
+                 className={`Page ${isSelected && 'selected'} ${isHiddenLeft && 'hiddenleft'} ${isHiddenRight && 'hiddenright'} ${header && 'has-header'} ${isZoomed && 'zoomed'}`}
                  onClick={event => onClick(index)} 
                  ref={node => (this[`Page${index}`] = node)}>
                  {header && 

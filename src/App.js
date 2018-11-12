@@ -3,6 +3,7 @@ import update from "immutability-helper";
 import './App.css';
 import Page from "./Page";
 
+const backgroundColor = "random";
 const pages = [
   {
     title:'Redux - What I\'ve learned',
@@ -135,16 +136,21 @@ class App extends Component {
 
     document.onkeydown = e => {
       e = e || window.event;
+      //console.log(e);
       if (e.key === "ArrowLeft") {
         this.moveBackward();
       } else if (e.key === "ArrowRight") {
         this.moveForward();
       } else if (parseInt(e.key) >= 0 && parseInt(e.key) <= 9) {
         this.goTo(parseInt(e.key));
-      } else if (e.key === "ArrowUp") {
-        this.zoomOut();
-      } else if (e.key === "ArrowDown") {
+      } else if (e.key === "ArrowUp" && this.state.current > 4 && this.state.isZoomedOut) {
+        this.goTo(this.state.current - 5);
+      } else if (e.key === "ArrowDown" && this.state.current < pages.length - 5 && this.state.isZoomedOut) {
+        this.goTo(this.state.current + 5);
+      } else if (e.key === "Enter") {
         this.zoomIn();
+      } else if (e.key === "Escape") {
+        this.zoomOut();
       }
     }
   }
@@ -159,16 +165,23 @@ class App extends Component {
       if (index % 5 === 0 && index !== 0) row++;
       return {
         index: index,
+        position:'absolute',
         left: `${left + (20 * (index % 5))}%`,
         right: `${right - (20 * (index % 5))}%`,
-        transform: `scale(.2) translateY(${translateY + (100 * row)}%)`
+        transform: `scale(.15) translateY(${translateY + (115 * row)}%) translateZ(0)`
       }
     })
 
     this.setState({
       isZoomedOut: true,
-      styles: styles
     });
+
+    //provide time for initial render
+    setTimeout(() => {
+      this.setState({
+        styles: styles
+      })
+    }, 100);
   }
 
   zoomIn = (index) => {
@@ -233,12 +246,13 @@ class App extends Component {
         {pages.map((page, index) => {
           if (index - this.state.current < 4 || this.state.isLoaded[index] || this.state.isZoomedOut) {
             return <Page key={index}
+                        isSelected={this.state.current === index}
                         isHiddenRight={this.state.current < index}
                         isHiddenLeft={this.state.current > index}
                         index={index}
                         style={this.state.styles[index]}
                         isZoomed={this.state.isZoomedOut}
-                        color={this.generateColor()} 
+                        color={backgroundColor === "random" ? this.generateColor() : backgroundColor} 
                         onLoad={this.onLoadPage}
                         onClick={this.onClick}
                         {...page} />
