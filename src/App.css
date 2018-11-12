@@ -16,6 +16,9 @@
 
 .Page {
   position:fixed;
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000;
   padding:10px;
   top:0;
   left:0;

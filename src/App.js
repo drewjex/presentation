@@ -57,7 +57,7 @@ class App extends Component {
         index: index,
         left: `${left + (20 * (index % 5))}%`,
         right: `${right - (20 * (index % 5))}%`,
-        transform: `scale(.2) translateY(${translateY + (100 * row)}%)`
+        transform: `scale(.2) translateY(${translateY + (100 * row)}%) translateZ(0)`
       }
     })
 
