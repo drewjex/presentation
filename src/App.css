@@ -43,8 +43,8 @@
 }
 
 .Page.zoomed {
-  transform: scale(.2);
-  position:absolute;
+  /*transform: scale(.2);
+  position:absolute;*/
   /*transition: opacity .25s ease-in-out, left .25s ease-in-out, right 5s ease-in-out, transform 5s ease-in-out;*/
 }
 

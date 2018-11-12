@@ -155,6 +155,7 @@ class App extends Component {
       if (index % 5 === 0 && index !== 0) row++;
       return {
         index: index,
+        position:'absolute',
         left: `${left + (20 * (index % 5))}%`,
         right: `${right - (20 * (index % 5))}%`,
         transform: `scale(.2) translateY(${translateY + (100 * row)}%) translateZ(0)`
@@ -163,8 +164,14 @@ class App extends Component {
 
     this.setState({
       isZoomedOut: true,
-      styles: styles
     });
+
+    //provide time for initial render
+    setTimeout(() => {
+      this.setState({
+        styles: styles
+      })
+    }, 100);
   }
 
   zoomIn = (index) => {
