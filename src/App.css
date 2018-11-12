@@ -16,7 +16,7 @@
 
 .Page {
   position:fixed;
-  will-change: transform;
+  will-change: transform, left, right;
   backface-visibility: hidden;
   perspective: 1000;
   padding:10px;
@@ -45,7 +45,7 @@
 .Page.zoomed {
   transform: scale(.2);
   position:absolute;
-  transition: opacity .25s ease-in-out, left 1s ease-in-out, right 1s ease-in-out, transform 1s ease-in-out;
+  /*transition: opacity .25s ease-in-out, left .25s ease-in-out, right 5s ease-in-out, transform 5s ease-in-out;*/
 }
 
 .Page.zoomed:hover {

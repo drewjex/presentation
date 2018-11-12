@@ -5,9 +5,109 @@ import Page from "./Page";
 
 const pages = [
   {
-    title:'Blank Template',
+    title:'CSS Fundamentals!',
     content:"Drew Jex",
     footer: "Access Development Front End Dev Team"
+  },
+  {
+    image: 'https://davidwalsh.name/demo/css-comic.jpg', //'https://ic.pics.livejournal.com/ivles/1125176/3534/3534_original.gif',
+    imageStyle: 'contain'
+  },
+  {
+    title:'CSS - it\'s kind of weird!'
+  },
+  {
+    header:'Things I wish I knew when I started',
+    content: [
+      'Box Model',
+      'Specificity',
+      'BEM',
+      'Positioning',
+      'Flexbox',
+      'SCSS',
+    ]
+  },
+  {
+    title:'Box Model'
+  },
+  {
+    iframe:'https://css-tricks.com/the-css-box-model/'
+  },
+  {
+    title:'box-sizing: border-box'
+  },
+  {
+    iframe: 'https://codepen.io/drewjex/pen/LXGQZY'
+  },
+  {
+    title:'Specificity'
+  },
+  {
+    iframe: 'https://css-tricks.com/specifics-on-css-specificity/#article-header-id-0'
+  },
+  {
+    iframe: 'https://codepen.io/drewjex/pen/PxZEMG'
+  },
+  {
+    title:'BEM'
+  },
+  {
+    iframe: 'https://css-tricks.com/bem-101/'
+  },
+  {
+    title: 'Positioning'
+  },
+  {
+    header: 'Four Types',
+    content: [
+      'Static - default',
+      'Relative',
+      'Absolute',
+      'Fixed'
+    ]
+  },
+  {
+    iframe: 'https://codepen.io/drewjex/pen/PxZEMG'
+  },
+  {
+    title:'Flexbox'
+  },
+  {
+    iframe: 'https://codepen.io/drewjex/pen/JePxaB'
+  },
+  {
+    title:'SCSS'
+  },
+  {
+    header:'SCSS Advantages',
+    content: [
+      'Variables',
+      'Nesting',
+      'Mixins'
+    ]
+  },
+  {
+    title:'Nesting is nice, but it can make your code complicated'
+  },
+  {
+    iframe: 'https://www.sitepoint.com/beware-selector-nesting-sass/'
+  },
+  {
+    header:'Other Stuff',
+    content: [
+      "CSS Vars (how ARC Theming works)",
+      "Animations/Transitions - often simple with awesome results"
+    ]
+  },
+  {
+    iframe: 'https://codepen.io/drewjex/pen/EOYBap'
+  },
+  {
+    title:'When you understand the fundamentals - everything becomes easier'
+  },
+  {
+    image: 'https://ic.pics.livejournal.com/ivles/1125176/3534/3534_original.gif',
+    imageStyle: 'contain'
   }
 ]
 
