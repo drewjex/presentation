@@ -132,6 +132,7 @@ class App extends Component {
 
     document.onkeydown = e => {
       e = e || window.event;
+      console.log(e);
       if (e.key === "ArrowLeft") {
         this.moveBackward();
       } else if (e.key === "ArrowRight") {
@@ -140,9 +141,9 @@ class App extends Component {
         this.goTo(parseInt(e.key));
       } else if (e.key === "ArrowUp") {
         this.zoomOut();
-      } else if (e.key === "ArrowDown") {
+      } else if (e.key === "ArrowDown" || e.key === "Enter") {
         this.zoomIn();
-      }
+      } 
     }
   }
 
@@ -237,6 +238,7 @@ class App extends Component {
         {pages.map((page, index) => {
           if (index - this.state.current < 4 || this.state.isLoaded[index] || this.state.isZoomedOut) {
             return <Page key={index}
+                        isSelected={this.state.current === index}
                         isHiddenRight={this.state.current < index}
                         isHiddenLeft={this.state.current > index}
                         index={index}
