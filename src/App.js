@@ -11,7 +11,10 @@ const pages = [
     footer: "Access Development Front End Dev Team"
   },
   {
-    image: 'https://davidwalsh.name/demo/css-comic.jpg', //'https://ic.pics.livejournal.com/ivles/1125176/3534/3534_original.gif',
+    iframe: 'https://saijogeorge.com/css-puns/'
+  },
+  {
+    image: 'https://davidwalsh.name/demo/css-comic.jpg', 
     imageStyle: 'contain'
   },
   {
