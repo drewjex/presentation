@@ -12,4 +12,4 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
 
-To modify/add/remove slides, simply update the pages
+To modify/add/remove slides, simply update App.json. Background color defaults to random colors, but can be assigned specific color if desired.
