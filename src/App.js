@@ -2,15 +2,9 @@ import React, { Component } from 'react';
 import update from "immutability-helper";
 import './App.css';
 import Page from "./Page";
+import _json from "./App.json";
 
-const backgroundColor = "random";
-const pages = [
-  {
-    title:'Blank Template',
-    content:"Drew Jex",
-    footer: "Access Development Front End Dev Team"
-  },
-]
+const { backgroundColor, pages } = _json;
 
 class App extends Component {
   state = {
