@@ -40,19 +40,12 @@
   justify-content: start;
 }
 
-.Page.zoomed {
-  /*transform: scale(.2);
-  position:absolute;*/
-  /*transition: opacity .25s ease-in-out, left .25s ease-in-out, right 5s ease-in-out, transform 5s ease-in-out;*/
-}
-
 .Page.selected.zoomed {
   box-shadow: 0 0 60pt 20pt rgb(2, 146, 241);
   z-index: 3;
 }
 
 .Page.zoomed:hover {
-  /*opacity: .5;*/
   box-shadow: 0 0 60pt 20pt rgb(2, 146, 241);
   cursor: pointer;
 }
@@ -78,12 +71,9 @@
 
 .Page .content.big {
   font-size:32px;
-  /*margin-top:20px;*/
 }
 
 .Page .header {
-  /* position: fixed;
-  top:100px; */
   margin-top:100px;
   font-size:64px;
   width:80%;
