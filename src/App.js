@@ -118,7 +118,7 @@ const pages = [
     iframe: 'https://codepen.io/drewjex/pen/rvREbE'
   },
   {
-    title:'Clone it, use it, make PRs!',
+    title:'Fork it, use it, make PRs!',
     content: 'github.com/drewjex/presentation'
   },
 ]
