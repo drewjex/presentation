@@ -3,7 +3,7 @@
     "pages": [
         {
             "title": "Blank Template",
-            "content": "Drew Jex",
+            "content": "Press left/right arrow keys to change slides, escape/enter to zoom in/out",
             "footer": "Access Development Front End Dev Team"
         },
         {
