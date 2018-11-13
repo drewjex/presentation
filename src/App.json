@@ -7,16 +7,18 @@
             "footer": "Access Development Front End Dev Team"
         },
         {
-            "header": "Available Slide Attributes",
+            "header": "Example Header",
             "content": [
-                "title (String): Large, centered text",
-                "header (String): Underlined text at top of page",
-                "content (String or Array): Simple text or list of elements",
-                "footer (String): Text at botom of slide",
-                "image (String): URL of image to display",
-                "imageStyle (String): If \"contain\", then display entire image. Else, scale to provided space",
-                "iframe (String): URL of external site - useful for demos in Codepen or similar (remember CORS)"
+                "Item A",
+                "Item B",
+                "Item C"
             ]
+        },
+        {
+            "image": "https://assets1.sportsnet.ca/wp-content/uploads/2014/09/Federer_640.jpg"
+        },
+        {
+            "iframe": "https://codepen.io/"
         }
     ]
 }
