@@ -8,7 +8,7 @@
     "react-dom": "^16.6.1"
   },
   "devDependencies": {
-    "har-validator": "5.1.1",
+    "har-validator": "5.1.0",
     "react-scripts": "2.1.1"
   },
   "scripts": {
