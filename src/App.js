@@ -64,6 +64,10 @@ const pages = [
     imageStyle: "contain"
   },
   {
+    image: '/selectors.png',
+    imageStyle: "contain"
+  },
+  {
     image: 'importselectors.png',
     imageStyle: "contain"
   },
@@ -81,26 +85,34 @@ const pages = [
     title: "Memoization"
   },
   {
-    title: "Splitting up Reducers"
+    title: "reselect - for expensive selectors"
+  },
+  {
+    image: "/reselect.png",
+    imageStyle: "contain"
+  },
+  {
+    title: "Reducer Composition"
   },
   {
     header: "Things to keep in mind...",
     content: [
       "Reducers not necesarily coupled with UI",
-      "Reducer depends on data from another reducer? Send data through action, set up hierarchy, or combine"
+      "Reducer depends on data from another reducer? Send data through action, combine, create hierarchy, or use Saga and getState()"
     ]
   },
   {
     title: "Redux Sauce"
   },
   {
+    image: '/reduxsauce.png',
+    imageStyle: "contain"
+  },
+  {
     title: "Much less boilerplate = :D"
   },
   {
-    title: "reselect - for expensive selectors"
-  },
-  {
-    title: "Thunks - when side effects are necessary"
+    title: "Thunks/Sagas - when side effects are necessary"
   },
   {
     title: "When should I connect()?"
