@@ -13,7 +13,7 @@ const pages = [
   {
     header: "Overview",
     content: [
-      "Basic Principles",
+      "Advantages",
       "Selectors/Reducers",
       "BindSelectors",
       "Memoization",
@@ -26,14 +26,16 @@ const pages = [
     ]
   },
   {
-    title: "Basic Principles"
+    title: "What does Redux give us?"
   },
   {
-    header: "Basic Principles",
+    header: "Advantages",
     content: [
-      "Reducers are pure",
-      "Entire state recreated when change occurs",
-      "Predictable (no side effects)"
+      "PREDICTABLE, IMMUTABLE State Container",
+      "Easy to test",
+      "Reusable, Flexible, Scalable - ideal for large apps",
+      "Data is centralized but organized",
+      "Uni-directional flow of data (separate reading/writing)"
     ]
   },
   {
