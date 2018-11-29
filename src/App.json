@@ -2,23 +2,52 @@
     "backgroundColor": "random",
     "pages": [
         {
-            "title": "Blank Template",
-            "content": "Press left/right arrow keys to change slides, escape/enter to zoom in/out",
+            "title": "What's new in React 16",
+            "content": "Drew Jex",
             "footer": "Access Development Front End Dev Team"
         },
         {
-            "header": "Example Header",
+            "header": "Overview",
             "content": [
-                "Item A",
-                "Item B",
-                "Item C"
+                "Context API + contextType",
+                "createRef/forwardRef",
+                "New/Deprecated Lifecycle Events !important",
+                "memo/PureComponents",
+                "Lazy loading and code splitting",
+                "Hooks/Effects - Q1 2019",
+                "Suspense for Data Fetching - mid 2019"
             ]
         },
         {
-            "image": "https://assets1.sportsnet.ca/wp-content/uploads/2014/09/Federer_640.jpg"
+            "title": "React is evolving all the time with new, better ways of doing things"
         },
         {
-            "iframe": "https://codepen.io/"
+            "image": "/twitter.png",
+            "imageStyle": "contain"
+        },
+        {
+            "title": "Context API"
+        },
+        {
+            "title": "createRef/forwardRef"
+        },
+        {
+            "title": "Deprecated Lifecycle Events (Don't use)"
+        },
+        {
+            "title": "New Lifecycle Events (use these instead)"
+        },
+        {
+            "title": "memo/PureComponents"
+        },
+        {
+            "title": "Lazy Loading"
+        },
+        {
+            "title": "Hooks/Effects! (Q1 2019 - currently in alpha)"
+        },
+        {
+            "title": "Suspense for Data Fetching - mid 2019 :):):)"
         }
     ]
 }
