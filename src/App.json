@@ -7,6 +7,39 @@
             "footer": "Access Development Front End Dev Team"
         },
         {
+            "title": "But first, some thought-provoking questions..."
+        },
+        {
+            "title": "Sam sung, but what song did Sam sing?"
+        },
+        {
+            "title": "Is a door able to be adorable, or is a door able to adore a bull?"
+        },
+        {
+            "title": "And if so, can a can of door rubble adore a bull or is a door rubble also adorable?"
+        },
+        {
+            "title": "And now for some original dad jokes..."
+        },
+        {
+            "title": "What is Excel's favorite basketball team?"
+        },
+        {
+            "title": "The Cell-tics!"
+        },
+        {
+            "title": "What is Excel's favorite country?"
+        },
+        {
+            "title": "Column-bia!"
+        },
+        {
+            "title": "What did the Hawaiian wizard say to his friend, Mora?"
+        },
+        {
+            "title": "Aloha, Mora!"
+        },
+        {
             "header": "Overview",
             "content": [
                 "Context API + contextType",
@@ -45,6 +78,15 @@
         },
         {
             "title": "Hooks/Effects! (Q1 2019 - currently in alpha)"
+        },
+        {
+            "title": "No more need for render-props?? Probably"
+        },
+        {
+            "title": "useReducer Hook - Redux becoming part of React!"
+        },
+        {
+            "title": "ReactN - https://github.com/CharlesStover/reactn"
         },
         {
             "title": "Suspense for Data Fetching - mid 2019 :):):)"
