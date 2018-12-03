@@ -16,9 +16,6 @@
             "title": "Is a door able to be adorable, or is a door able to adore a bull?"
         },
         {
-            "title": "And if so, can a can of door rubble adore a bull or is a door rubble also adorable?"
-        },
-        {
             "title": "And now for some original dad jokes..."
         },
         {
@@ -59,7 +56,30 @@
             "imageStyle": "contain"
         },
         {
+            "image": "/twitter2.png",
+            "imageStyle": "contain"
+        },
+        {
             "title": "Context API"
+        },
+        {
+            "image": "/createcontext.png",
+            "imageStyle": "contain"
+        },
+        {
+            "image": "/provider.png",
+            "imageStyle": "contain"
+        },
+        {
+            "image": "/consumer.png",
+            "imageStyle": "contain"
+        },
+        {
+            "image": "/contextType.png",
+            "imageStyle": "contain"
+        },
+        {
+            "title": "NOT a Redux killer"
         },
         {
             "title": "createRef/forwardRef"
