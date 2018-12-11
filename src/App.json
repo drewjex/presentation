@@ -103,10 +103,13 @@
             "title": "No more need for render-props?? Probably"
         },
         {
+            "title": "https://egghead.io/courses/simplify-react-apps-with-react-hooks"
+        },
+        {
             "title": "useReducer Hook - Redux becoming part of React!"
         },
         {
-            "title": "ReactN - https://github.com/CharlesStover/reactn"
+            "title": "ReactN"
         },
         {
             "title": "Suspense for Data Fetching - mid 2019 :):):)"
