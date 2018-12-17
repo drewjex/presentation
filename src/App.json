@@ -82,19 +82,52 @@
             "title": "NOT a Redux killer"
         },
         {
-            "title": "createRef/forwardRef"
+            "title": "Deprecated Lifecycle Events (Don't use)"
         },
         {
-            "title": "Deprecated Lifecycle Events (Don't use)"
+            "header": "Deprecated in React 17",
+            "content": [
+                "componentWillMount",
+                "componentWillReceiveProps",
+                "componentWillUpdate"
+            ]
         },
         {
             "title": "New Lifecycle Events (use these instead)"
         },
         {
+            "header": "New in React 16",
+            "content": [
+                "getDerivedStateFromProps",
+                "getSnapshotBeforeUpdate"
+            ]
+        },
+        {
+            "title": "You probably don't need derived state"
+        },
+        {
+            "title": "What about data fetching??"
+        },
+        {
+            "title":"use componentDidMount"
+        },
+        {
             "title": "memo/PureComponents"
         },
         {
-            "title": "Lazy Loading"
+            "title": "Only re render if props change"
+        },
+        {
+            "title": "Example: iFrames in this app!!"
+        },
+        {
+            "title": "Pure: Classes, Memo: Functions"
+        },
+        {
+            "title": "Lazy Loading and Code Splitting"
+        },
+        {
+            "title": "(screenshot goes here)"
         },
         {
             "title": "Hooks/Effects! (Q1 2019 - currently in alpha)"
@@ -113,6 +146,9 @@
         },
         {
             "title": "Suspense for Data Fetching - mid 2019 :):):)"
+        },
+        {
+            "title": "Probably one of the coolest things ever"
         }
     ]
 }
