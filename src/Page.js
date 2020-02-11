@@ -61,7 +61,7 @@ export default class Page extends Component {
                 <div className="footer">
                     {footer ? footer : index}
                 </div>
-                <img alt='' className="logo" src="https://www.accessdevelopment.com/hs-fs/hubfs/AccessDevelopment_June2017/logo.png?t=1529951130710&width=138&name=logo.png" />
+                <img alt='' className="logo" src="https://banner2.kisspng.com/20180426/hoe/kisspng-amazon-com-amazon-web-services-cloud-computing-amazon-logo-5ae209d786e676.3280528715247630955526.jpg" />
             </div>
         )
     }

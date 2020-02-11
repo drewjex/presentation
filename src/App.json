@@ -2,17 +2,59 @@
     "backgroundColor": "random",
     "pages": [
         {
-            "title": "Blank Template",
-            "content": "Press left/right arrow keys to change slides, escape/enter to zoom in/out",
-            "footer": "Access Development Front End Dev Team"
+            "title": "Getting hooked on React Hooks",
+            "content": "A brief intro into why they're totally awesome", 
+            "footer": "ECS Console Team"
         },
         {
-            "header": "Example Header",
+            "header": "Why we use React",
             "content": [
-                "Item A",
-                "Item B",
-                "Item C"
+                "Virtual DOM?",
+                "Takes care of V in MVC?"
             ]
+        },
+        {
+            "title": "Those are not truly the most important reasons we use React"
+        },
+        {
+            "header": "Why we use React",
+            "content": [
+                "Composition - NOT inheritance",
+                "Uni-directional data flow - predictable, testable",
+                "Explicit Mutation - pure functions, changes are predictable and intentional",
+                "Static Mental Model - don't need to worry about details"
+            ]
+        },
+        {
+            "title": "What are some React problems you've faced?"
+        },
+        {
+            "content":[
+                "Prop-drilling",
+                "Components with tons and tons of props",
+                "Nested components",
+                "Poor debugging experience"
+            ]
+        },
+        {
+            "title": "STATE MANAGEMENT!"
+        },
+        {
+            "header": "Several libraries were created to help fix this...",
+            "content": [
+                "Redux", 
+                "Flux",
+                "Hundreds of variations of this ^^^"
+            ]
+        },
+        {
+            "title": "Enter React Hooks..."
+        },
+        {
+            "title": "What does React Hooks bring to the table?"
+        },
+        {
+            "title": "React Hooks allow <i>composition of state</i>"
         },
         {
             "image": "https://assets1.sportsnet.ca/wp-content/uploads/2014/09/Federer_640.jpg"
