@@ -1,24 +1,61 @@
 {
-    "backgroundColor": "random",
-    "pages": [
-        {
-            "title": "Blank Template",
-            "content": "Press left/right arrow keys to change slides, escape/enter to zoom in/out",
-            "footer": "Access Development Front End Dev Team"
-        },
-        {
-            "header": "Example Header",
-            "content": [
-                "Item A",
-                "Item B",
-                "Item C"
-            ]
-        },
-        {
-            "image": "https://assets1.sportsnet.ca/wp-content/uploads/2014/09/Federer_640.jpg"
-        },
-        {
-            "iframe": "https://codepen.io/"
-        }
-    ]
+  "backgroundColor": "random",
+  "pages": [
+    {
+      "title": "State Charts using XState",
+      "content": "A brown bag by Drew Jex",
+      "footer": "AWS Insights Budgets"
+    },
+    {
+      "title": "Finite State Machines"
+    },
+    {
+      "image": "https://www.researchgate.net/profile/Alessandra_Gorla/publication/220643522/figure/fig3/AS:669274200895515@1536578812592/A-finite-state-machine-specification-of-a-simple-sale-function.png"
+    },
+    {
+      "title": "State Charts"
+    },
+    {
+      "iframe": "https://xstate.js.org/viz/?gist=0fb0f7e94e8e199c5fcc2989cd76c42e"
+    },
+    {
+      "title": "XState = State Charts + JavaScript = 😍"
+    },
+    {
+      "header": "2 Questions we should ask:",
+      "content": ["Why does this library exist?", "What problem does it solve?"]
+    },
+    {
+      "title": "JSON-serializable, SCXML-compatible state-chart container in JavaScript"
+    },
+    {
+      "title": "Problem Example"
+    },
+    {
+      "iframe": "https://codepen.io/drewjex/pen/VwLvZdy?editors=0010"
+    },
+    {
+      "iframe": "https://codepen.io/drewjex/pen/rNVOBEW?editors=0010"
+    },
+    {
+      "iframe": "https://xstate.js.org/viz/?gist=414c0e4c40dab1dc80c9218f85605a24"
+    },
+    {
+      "title": "Actor model = Microservices",
+      "notes": "Why? It scales well! It reduces complexity by decoupling services (even though it may seem like it complicates things). This idea has been around for 50 years but recently has really seen a lot of adoption in backend and frontend"
+    },
+    {
+      "title": "Decoupling from UI framework"
+    },
+    {
+      "title": "Proactive about states of your application",
+      "notes": "States are CLEARLY defined. It's predictable! Like Typescript, but for states. Great for designing and writing out ideas. Maybe it makes your code longer, but the return is much better! Ex. Budgets Actions"
+    },
+    {
+      "title": "Model-based testing"
+    },
+    {
+      "title": "Is XState always necessary? No, but its principles are invaluable."
+    }
+  ]
 }
