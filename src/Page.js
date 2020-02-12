@@ -58,11 +58,11 @@ export default class Page extends Component {
           )}
         </div>
         <div className="footer">{footer ? footer : index}</div>
-        <img
+        {/* <img
           alt=""
           className="logo"
           src="https://banner2.kisspng.com/20180426/hoe/kisspng-amazon-com-amazon-web-services-cloud-computing-amazon-logo-5ae209d786e676.3280528715247630955526.jpg"
-        />
+        /> */}
       </div>
     );
   }
